@@ -1,5 +1,5 @@
 <template>
-    <main class="container mt-3">
+    <main class="container mt-3 d-flex justify-content-center align-items-center">
         <AppListCard />
     </main>
 </template>
@@ -17,7 +17,7 @@ export default {
     },
 
     created() {
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=39&offset=0')
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=71&offset=0')
             .then((response) => {
                 store.list = response.data.data
                 console.log(store.list)
@@ -32,8 +32,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-main {
-    height: calc(100vh - 88px);
-
-}
+main {}
 </style>
