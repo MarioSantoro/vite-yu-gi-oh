@@ -1,10 +1,12 @@
 <template >
-    <div class="shadow">
-        <div class="loader">
-            <div class="item top"></div>
-            <div class="item left"></div>
-            <div class="item right"></div>
-            <div class="item bottom"></div>
+    <div class="loader d-flex justify-content-center">
+        <div class="shadow">
+            <div class="loader">
+                <div class="item top"></div>
+                <div class="item left"></div>
+                <div class="item right"></div>
+                <div class="item bottom"></div>
+            </div>
         </div>
     </div>
 </template>

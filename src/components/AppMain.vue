@@ -1,19 +1,6 @@
 <template>
-    <div class="selection container mt-3">
-        <select name="type" id="type">
-            <option value="Alien">Alien</option>
-            <option value="Noble Knight">Noble Knight</option>
-            <option value="Melodious">Melodious</option>
-            <option value="Archfiend">Archfiend</option>
-            <option value="Elemental HERO">Elemental HERO</option>
-            <option value="Umi">Umi</option>
-            <option value="ABC">ABC</option>
-            <option value="A.I.">A.I.</option>
-            <option value="@Ignister">@Ignister</option>
-            <option value="Abyss Actor">Abyss Actor</option>
-        </select>
-    </div>
-    <main class="container mt-3 d-flex justify-content-center align-items-center">
+    <main class="container mt-3">
+        <AppFilterCard />
         <AppListCard />
     </main>
 </template>
@@ -21,6 +8,7 @@
 import axios from "axios"
 import { store } from '../store.js'
 import AppListCard from "./AppListCard.vue"
+import AppFilterCard from "./AppFilterCard.vue"
 export default {
     data() {
         return {
@@ -28,6 +16,7 @@ export default {
     },
     components: {
         AppListCard,
+        AppFilterCard
     },
 
     created() {
