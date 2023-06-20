@@ -1,7 +1,11 @@
 <template >
-    <div>
+    <div class="my-3">
         <select name="arctype" id="type">
-            <option v-for="(type) in listOfType" :value="type.archetype_name"> {{ type.archetype_name }} </option>
+            <option @click=" $emit('tutto', 'All')" value="All">All</option>
+            <option v-for="(type, index) in listOfType" :value="type.archetype_name"
+                @click=" $emit('select', type.archetype_name)">
+                {{ type.archetype_name }}
+            </option>
         </select>
     </div>
 </template>
@@ -18,7 +22,6 @@ export default {
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
             .then((response) => {
                 this.listOfType = response.data.slice(0, 50)
-                console.log(this.listOfType)
             })
             .catch(function (error) {
                 console.log(error);
